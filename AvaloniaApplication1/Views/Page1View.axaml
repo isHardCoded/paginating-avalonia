@@ -6,7 +6,49 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="AvaloniaApplication1.Page1View"
              x:DataType="vm:Page1ViewModel">
-  <StackPanel>
-    <TextBlock Text="{Binding Text}" />
-  </StackPanel>
+  <StackPanel Margin="10">
+        <StackPanel.Styles>
+			<Style Selector="Button">
+				<Setter Property="Height" Value="60" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="Margin" Value="2" />
+                <Setter Property="HorizontalAlignment" Value="Stretch" />
+                <Setter Property="VerticalAlignment" Value="Stretch" />
+                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                <Setter Property="VerticalContentAlignment" Value="Center" />
+            </Style>
+        </StackPanel.Styles>
+        
+        <TextBox Text="{Binding Display}" 
+                 FontSize="32" 
+                 IsReadOnly="True" 
+                 Height="60"
+                 HorizontalContentAlignment="Right" />
+
+        <UniformGrid Columns="4" Margin="0, 10, 0, 0">
+            <Button Content="=" Command="{Binding CalculateCommand}" />
+            <Button Content="C" Command="{Binding ClearAllCommand}" />
+            <Button Content="CE" Command="{Binding ClearEntryCommand}" />
+            <Button Content="/" Command="{Binding SetOperationCommand}" CommandParameter="/" />
+
+			<Button Content="1" Command="{Binding InputCommand}" CommandParameter="1" />
+            <Button Content="2" Command="{Binding InputCommand}" CommandParameter="2" />
+            <Button Content="3" Command="{Binding InputCommand}" CommandParameter="3" />
+            <Button Content="+" Command="{Binding SetOperationCommand}" CommandParameter="+" />
+
+            <Button Content="4" Command="{Binding InputCommand}" CommandParameter="4" />
+            <Button Content="5" Command="{Binding InputCommand}" CommandParameter="5" />
+            <Button Content="6" Command="{Binding InputCommand}" CommandParameter="6" />
+            <Button Content="-" Command="{Binding SetOperationCommand}" CommandParameter="-" />
+
+            <Button Content="7" Command="{Binding InputCommand}" CommandParameter="7" />
+            <Button Content="8" Command="{Binding InputCommand}" CommandParameter="8" />
+            <Button Content="9" Command="{Binding InputCommand}" CommandParameter="9" />
+            <Button Content="*" Command="{Binding SetOperationCommand}" CommandParameter="*" />
+
+            <Button Content="0" Command="{Binding InputCommand}" CommandParameter="0" />
+            
+            
+        </UniformGrid>
+    </StackPanel>
 </UserControl>

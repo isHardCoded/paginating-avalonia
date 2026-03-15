@@ -21,10 +21,9 @@
 			<ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Column="0" Background="#dadada">
-            <Button Content="Page 1" Command="{Binding GoPage1Command}" />
-            <Button Content="Page 2" Command="{Binding GoPage2Command}" />
-            <Button Content="Page 3" Command="{Binding GoPage3Command}" />
+        <StackPanel Grid.Column="0">
+            <Button HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="50" Margin="0 10 0 0"  Content="Калькулятор" Command="{Binding GoPage1Command}" />
+            <Button HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="50" Margin="0 5 0 0" Content="Конвертер" Command="{Binding GoPage2Command}" />
         </StackPanel>
 
         <ContentControl Grid.Column="1" Content="{Binding CurrentPage}" />

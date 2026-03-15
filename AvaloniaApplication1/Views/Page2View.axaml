@@ -6,7 +6,23 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="AvaloniaApplication1.Page2View"
              x:DataType="vm:Page2ViewModel">
-  <StackPanel>
-	  <TextBlock Text="{Binding Text}" />
-  </StackPanel>
+  <StackPanel VerticalAlignment="Center">
+            <TextBlock Margin="5" FontSize="24" HorizontalAlignment="Center" Text="Temperature Converter" />
+
+            <Grid HorizontalAlignment="Center"
+                  Margin="5" 
+                  ColumnDefinitions="100, 100" 
+                  RowDefinitions="Auto, Auto">
+
+                <TextBlock Grid.Row="0" Grid.Column="0" Margin="10">Celsius</TextBlock>
+                <TextBox Grid.Row="0" Grid.Column="1" Margin="0 5" Text="0" Name="Celsius"/>
+                <TextBlock Grid.Row="1" Grid.Column="0" Margin="10">Fahrenheit</TextBlock>
+                <TextBox Grid.Row="1" Grid.Column="1" Margin="0 5" Text="0" Name="Fahrenheit" />
+
+            </Grid>
+
+			<Button Click="Button_OnClick" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="200">
+                Calculate
+            </Button>
+        </StackPanel>
 </UserControl>
